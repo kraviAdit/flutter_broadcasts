@@ -50,7 +50,7 @@ class CustomBroadcastReceiver(
 
     fun start(context: Context) {
         if (Build.VERSION.SDK_INT >= 34) {
-            context.registerReceiver(this, intentFilter, Context.RECEIVER_NOT_EXPORTED)
+            context.registerReceiver(this, intentFilter, Context.RECEIVER_EXPORTED)
         } else {
             context.registerReceiver(this, intentFilter)
         }
